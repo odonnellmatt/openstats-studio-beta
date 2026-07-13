@@ -1,4 +1,8 @@
-# OpenStats Studio 0.1.0 Beta 1
+# OpenStats Studio Beta 0.1.0
+
+## **[⬇ Download for macOS Apple Silicon](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.0-beta.1/OpenStats-Studio-Beta-0.1.0-macOS-Apple-Silicon.dmg)**
+
+**macOS 13 or later · Apple Silicon · 255 MB DMG**
 
 This is the first public evaluation build of OpenStats Studio for macOS Apple
 Silicon.
@@ -25,7 +29,7 @@ and real-world research workflows before a wider release.
 
 ## Verify the download
 
-File: `OpenStats-Studio-0.1.0-aarch64.dmg`
+File: `OpenStats-Studio-Beta-0.1.0-macOS-Apple-Silicon.dmg`
 
 Size: `255,449,548 bytes`
 

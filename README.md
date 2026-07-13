@@ -1,4 +1,12 @@
-# OpenStats Studio — Public Beta
+# OpenStats Studio Beta 0.1.0
+
+## Download for macOS
+
+### **[⬇ Download OpenStats Studio Beta 0.1.0](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.0-beta.1/OpenStats-Studio-Beta-0.1.0-macOS-Apple-Silicon.dmg)**
+
+**macOS 13 or later · Apple Silicon · 255 MB DMG**
+
+This is prerelease beta software. Please read the beta notice below before use.
 
 OpenStats Studio is a local-first desktop statistics application for people who
 want to move from data to clear, structured results in one workspace.
@@ -23,9 +31,10 @@ unclear and where the workflow can improve.
 
 ## Download
 
-Download the latest beta from the repository's **Releases** section:
+The direct download button at the top of this page downloads the current macOS
+beta. Release notes and checksum files are also available from **Releases**:
 
-**[OpenStats Studio beta releases](https://github.com/odonnellmatt/openstats-studio-beta/releases)**
+**[View OpenStats Studio Beta 0.1.0 release details](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.0-beta.1)**
 
 Current beta platform:
 
@@ -79,4 +88,3 @@ files to a public issue.
 
 This repository is a download and beta-feedback page only. It does not contain
 the OpenStats Studio application source code.
-

@@ -1,1 +1,1 @@
-42c3df851b77e8abfa1c0e932d1f7b0569cbfac97e989648b9f4ce69251f539e  OpenStats-Studio-0.1.0-aarch64.dmg
+42c3df851b77e8abfa1c0e932d1f7b0569cbfac97e989648b9f4ce69251f539e  OpenStats-Studio-Beta-0.1.0-macOS-Apple-Silicon.dmg
