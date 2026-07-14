@@ -1,10 +1,10 @@
-# OpenStats Studio Beta 0.1.0
+# OpenStats Studio Beta 0.1.0 (build 2)
 
 ## Download for macOS
 
-### **[⬇ Download OpenStats Studio Beta 0.1.0](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.0-beta.1/OpenStats-Studio-Beta-0.1.0-macOS-Apple-Silicon.dmg)**
+### **[⬇ Download OpenStats Studio Beta 0.1.0](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.0-beta.2/OpenStats-Studio-Beta-0.1.0-macOS-Apple-Silicon.dmg)**
 
-**macOS 13 or later · Apple Silicon · 255 MB DMG**
+**macOS 13 or later · Apple Silicon · 296 MB DMG**
 
 This is prerelease beta software. Please read the beta notice below before use.
 
@@ -16,13 +16,23 @@ practical environment for preparing data, running statistical analyses,
 reviewing results and producing useful outputs without sending their datasets
 to a hosted analysis service.
 
+## What's new in build 2
+
+- Bayesian estimation, including MCMC sampling
+- Machine-learning workbenches: classification, regression, clustering and
+  anomaly detection
+- Network analysis procedures
+- Graph Studio, a new dedicated graph-building canvas
+- Expanded chart capability detection, data export and map document support
+
 ## What you can explore
 
 - Import, inspect and prepare common research datasets.
-- Run a broad collection of statistical and econometric analyses.
+- Run a broad collection of statistical and econometric analyses, including
+  Bayesian, machine-learning and network-analysis workbenches.
 - Review structured output, diagnostics and supporting guidance.
 - Organise results and reopen saved projects.
-- Create charts, maps and report-ready exports.
+- Create charts, graphs, maps and report-ready exports.
 - Work locally by default. Optional online map layers are clearly identified.
 
 The beta is intentionally being released for hands-on evaluation. Try it with
@@ -34,7 +44,7 @@ unclear and where the workflow can improve.
 The direct download button at the top of this page downloads the current macOS
 beta. Release notes and checksum files are also available from **Releases**:
 
-**[View OpenStats Studio Beta 0.1.0 release details](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.0-beta.1)**
+**[View OpenStats Studio Beta 0.1.0 release details](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.0-beta.2)**
 
 Current beta platform:
 
