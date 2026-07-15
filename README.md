@@ -131,3 +131,22 @@ files to a public issue.
 
 This repository is a download and beta-feedback page only. It does not contain
 the OpenStats Studio application source code.
+
+## Screenshots of 0.1.1
+
+### Data view
+<img width="1794" height="1128" alt="Screenshot 2026-07-15 at 3 18 38 pm" src="https://github.com/user-attachments/assets/6654eb2a-5c60-4488-ac33-a532e2039185" />
+
+### Some methods
+<img width="1796" height="1125" alt="Screenshot 2026-07-15 at 3 18 54 pm" src="https://github.com/user-attachments/assets/be1b73c1-1f96-495c-9540-e3cba980ff96" />
+
+### Example method (MLR)
+<img width="1795" height="1125" alt="Screenshot 2026-07-15 at 3 19 24 pm" src="https://github.com/user-attachments/assets/bb01e934-64da-4714-9148-1778cd60584d" />
+
+### Example output
+<img width="1795" height="1126" alt="Screenshot 2026-07-15 at 3 19 55 pm" src="https://github.com/user-attachments/assets/f3b5ee86-3f71-4935-ae86-1e4f2aa5c341" />
+
+### Chart gallery
+<img width="1794" height="1124" alt="Screenshot 2026-07-15 at 3 20 20 pm" src="https://github.com/user-attachments/assets/d0a17ba2-bedf-48ed-bb73-982325fe9653" />
+
+
