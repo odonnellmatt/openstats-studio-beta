@@ -132,7 +132,7 @@ files to a public issue.
 This repository is a download and beta-feedback page only. It does not contain
 the OpenStats Studio application source code.
 
-## Screenshots of 0.1.1
+## Screenshots of Beta 0.1.1
 
 ### Data view
 <img width="1794" height="1128" alt="Screenshot 2026-07-15 at 3 18 38 pm" src="https://github.com/user-attachments/assets/6654eb2a-5c60-4488-ac33-a532e2039185" />
