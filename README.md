@@ -1,10 +1,18 @@
-# OpenStats Studio Beta 0.1.0 (build 2)
+# OpenStats Studio Beta 0.1.1
 
-## Download for macOS
+## Downloads
 
-### **[⬇ Download OpenStats Studio Beta 0.1.0](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.0-beta.2/OpenStats-Studio-Beta-0.1.0-macOS-Apple-Silicon.dmg)**
+### **[⬇ Download for macOS Apple Silicon](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.1-beta.1/OpenStats-Studio-Beta-0.1.1-macOS-Apple-Silicon.dmg)**
 
-**macOS 13 or later · Apple Silicon · 283 MB DMG**
+**macOS 13 or later · Apple Silicon · 285 MB DMG**
+
+### **[⬇ Download for Windows x64](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.1-beta.1/OpenStats-Studio-Beta-0.1.1-Windows-x64-setup.exe)**
+
+**Windows 10/11 · x64 · 217 MB installer**
+
+### **[⬇ Download for Windows on ARM](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.1-beta.1/OpenStats-Studio-Beta-0.1.1-Windows-ARM64-setup.exe)**
+
+**Windows 11 · ARM64 · 216 MB installer**
 
 This is prerelease beta software. Please read the beta notice below before use.
 
@@ -15,15 +23,6 @@ It is designed for researchers, students, analysts and educators who need a
 practical environment for preparing data, running statistical analyses,
 reviewing results and producing useful outputs without sending their datasets
 to a hosted analysis service.
-
-## What's new in build 2
-
-- Bayesian estimation, including MCMC sampling
-- Machine-learning workbenches: classification, regression, clustering and
-  anomaly detection
-- Network analysis procedures
-- Graph Studio, a new dedicated graph-building canvas
-- Expanded chart capability detection, data export and map document support
 
 ## What you can explore
 
@@ -39,18 +38,35 @@ The beta is intentionally being released for hands-on evaluation. Try it with
 realistic but non-critical projects and let us know what works well, what feels
 unclear and where the workflow can improve.
 
+## What's new in Beta 0.1.1
+
+- First Windows builds: x64 and Windows on ARM installers join the macOS DMG.
+- Results tables: every column (including the last) can be resized, and your
+  column widths now persist across navigation and project save/reopen.
+- Reliable save, copy and export of results — image copy/save failures are
+  fixed, and Word export now produces a genuine `.docx` file.
+- Cleaner presentation of estimated equations and improved table readability.
+- Every option in every analysis dialog now has working help.
+- Graph Studio: analyses can be cancelled, and very large graphs warn or are
+  safely blocked instead of freezing the application.
+- Faster loading through smaller application bundles.
+
 ## Download
 
-The direct download button at the top of this page downloads the current macOS
-beta. Release notes and checksum files are also available from **Releases**:
+The direct download buttons at the top of this page download the current beta
+for each platform. Release notes and checksum files are also available from
+**Releases**:
 
-**[View OpenStats Studio Beta 0.1.0 release details](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.0-beta.2)**
+**[View OpenStats Studio Beta 0.1.1 release details](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.1-beta.1)**
 
-Current beta platform:
+Current beta platforms:
 
-- macOS 13 or later
-- Apple Silicon (`arm64`)
-- Intel Macs are not supported by this build
+- macOS 13 or later on Apple Silicon (`arm64`). Intel Macs are not supported
+  by this build.
+- Windows 10/11 on x64.
+- Windows 11 on ARM (`arm64`). The bundled analytics engine currently runs
+  through Windows' built-in x64 compatibility layer; a fully native engine is
+  planned.
 
 ## Important beta notice
 
@@ -64,18 +80,35 @@ project formats and outputs may change, and defects may still be present.
   financial decisions.
 - There is currently no automatic update channel.
 
-This macOS beta is locally signed for integrity but is not yet Apple-notarised.
-macOS may therefore display an unidentified-developer warning. Confirm that the
-downloaded file has the published SHA-256 before choosing **Open Anyway** in
-Privacy & Security. Do not bypass the warning if the checksum differs.
+The macOS beta is locally signed for integrity but is not yet Apple-notarised,
+so macOS may display an unidentified-developer warning. The Windows installers
+are not yet code-signed, so Microsoft Defender SmartScreen may display a
+"Windows protected your PC" warning. In both cases, confirm that the downloaded
+file has the published SHA-256 before proceeding. Do not bypass the warning if
+the checksum differs.
 
 ## Install on macOS
 
 1. Download the `.dmg` from the latest beta release.
 2. Confirm its SHA-256 against the value published with the release.
 3. Open the disk image and drag **OpenStats Studio** into **Applications**.
-4. Launch the application. The first launch may take a little longer while the
-   bundled local analytics engine starts.
+4. Launch the application. If macOS shows an unidentified-developer warning,
+   choose **Open Anyway** in **System Settings → Privacy & Security** only
+   after the checksum matches.
+5. The first launch may take a little longer while the bundled local analytics
+   engine starts.
+
+## Install on Windows
+
+1. Download the installer that matches your machine: `x64` for ordinary
+   Intel/AMD PCs, `ARM64` for Windows-on-ARM devices such as Snapdragon
+   laptops. (**Settings → System → About → System type** shows which you have.)
+2. Confirm its SHA-256 against the value published with the release
+   (`certutil -hashfile <file> SHA256` in a terminal).
+3. Run the installer. If SmartScreen appears, choose **More info → Run anyway**
+   only after the checksum matches.
+4. Launch **OpenStats Studio** from the Start menu. The first launch may take a
+   little longer while the bundled local analytics engine starts.
 
 No separate Python, R, Node.js or internet connection is required for ordinary
 analysis. Selecting an online map provider can contact that provider and reveal
@@ -86,7 +119,7 @@ offline.
 
 Please use this repository's **Issues** section for beta feedback. Include:
 
-- macOS version and Mac model
+- your operating system version and device model
 - the action you were attempting
 - what you expected and what happened
 - reproducible steps using non-confidential data
