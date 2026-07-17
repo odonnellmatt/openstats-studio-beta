@@ -1,18 +1,18 @@
-# OpenStats Studio Beta 0.1.1
+# OpenStats Studio Beta 0.1.2
 
 ## Downloads
 
-### **[⬇ Download for macOS Apple Silicon](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.1-beta.1/OpenStats-Studio-Beta-0.1.1-macOS-Apple-Silicon.dmg)**
+### **[⬇ Download for macOS Apple Silicon](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.2-beta.1/OpenStats-Studio-Beta-0.1.2-macOS-Apple-Silicon.dmg)**
 
-**macOS 13 or later · Apple Silicon · 285 MB DMG**
+**macOS 13 or later · Apple Silicon · 284 MB DMG**
 
-### **[⬇ Download for Windows x64](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.1-beta.1/OpenStats-Studio-Beta-0.1.1-Windows-x64-setup.exe)**
+### **[⬇ Download for Windows x64](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.2-beta.1/OpenStats-Studio-Beta-0.1.2-Windows-x64-setup.exe)**
 
-**Windows 10/11 · x64 · 217 MB installer**
+**Windows 10/11 · x64 · 180 MB installer**
 
-### **[⬇ Download for Windows on ARM](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.1-beta.1/OpenStats-Studio-Beta-0.1.1-Windows-ARM64-setup.exe)**
+### **[⬇ Download for Windows on ARM](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.2-beta.1/OpenStats-Studio-Beta-0.1.2-Windows-ARM64-setup.exe)**
 
-**Windows 11 · ARM64 · 216 MB installer**
+**Windows 11 · ARM64 · 179 MB installer**
 
 This is prerelease beta software. Please read the beta notice below before use.
 
@@ -38,18 +38,38 @@ The beta is intentionally being released for hands-on evaluation. Try it with
 realistic but non-critical projects and let us know what works well, what feels
 unclear and where the workflow can improve.
 
-## What's new in Beta 0.1.1
+## What's new in Beta 0.1.2
 
-- First Windows builds: x64 and Windows on ARM installers join the macOS DMG.
-- Results tables: every column (including the last) can be resized, and your
-  column widths now persist across navigation and project save/reopen.
-- Reliable save, copy and export of results — image copy/save failures are
-  fixed, and Word export now produces a genuine `.docx` file.
-- Cleaner presentation of estimated equations and improved table readability.
-- Every option in every analysis dialog now has working help.
-- Graph Studio: analyses can be cancelled, and very large graphs warn or are
-  safely blocked instead of freezing the application.
-- Faster loading through smaller application bundles.
+- **Standard regression output**: the results page now opens with the
+  coefficient table and its combined fit statistics (R², adjusted R², F,
+  information criteria, Durbin–Watson), followed by the estimated equation and
+  the ANOVA table — the familiar EViews/SPSS/R presentation.
+- **Self-explanatory diagnostics**: every diagnostic test now carries a
+  plain-language **Note** column stating what the result means at your chosen
+  significance level, with significance stars (`*`, `**`, `***`) shown
+  consistently on every p-value column. The Note column can be shown or hidden
+  from **Table style**, and table footnotes are numbered (Note¹, Note², …).
+- **Better tables**: tables size to their content instead of stretching across
+  the page, stay centred while being resized, and use a consistent 12px type
+  with more comfortable column spacing.
+- **Exports that match the screen**: Word, PDF, HTML and Markdown exports
+  follow the on-screen section order and now include the diagnostic charts
+  (coefficient intervals, residuals vs fitted, Q–Q plot) in the document.
+- **Mapping, graphing and charting**: independent map layers with per-layer
+  sources and styling, cancellable rendering for large graphs, and a reworked
+  Chart Studio ribbon with a Selection Pane supporting keyboard selection,
+  lock/reorder/inspect actions and undo/redo.
+- **Guidance everywhere**: concise, working help for every option across the
+  analysis catalogue.
+
+## What was new in Beta 0.1.1
+
+- First Windows builds: x64 and Windows on ARM installers joined the macOS DMG.
+- Resizable Results table columns that persist across navigation and
+  project save/reopen.
+- Reliable save, copy and export of results, including genuine `.docx` output.
+- Cleaner presentation of estimated equations, working help in every analysis
+  dialog, cancellable Graph Studio analyses, and faster loading.
 
 ## Download
 
@@ -57,7 +77,7 @@ The direct download buttons at the top of this page download the current beta
 for each platform. Release notes and checksum files are also available from
 **Releases**:
 
-**[View OpenStats Studio Beta 0.1.1 release details](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.1-beta.1)**
+**[View OpenStats Studio Beta 0.1.2 release details](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.2-beta.1)**
 
 Current beta platforms:
 
@@ -135,18 +155,16 @@ the OpenStats Studio application source code.
 ## Screenshots of Beta 0.1.1
 
 ### Data view
-<img width="1794" height="1128" alt="Screenshot 2026-07-15 at 3 18 38 pm" src="https://github.com/user-attachments/assets/6654eb2a-5c60-4488-ac33-a532e2039185" />
+<img width="1794" height="1128" alt="Screenshot 2026-07-15 at 3 18 38 pm" src="https://github.com/user-attachments/assets/6654eb2a-5c60-4488-ac33-a532e2039185" />
 
 ### Some methods
-<img width="1796" height="1125" alt="Screenshot 2026-07-15 at 3 18 54 pm" src="https://github.com/user-attachments/assets/be1b73c1-1f96-495c-9540-e3cba980ff96" />
+<img width="1796" height="1125" alt="Screenshot 2026-07-15 at 3 18 54 pm" src="https://github.com/user-attachments/assets/be1b73c1-1f96-495c-9540-e3cba980ff96" />
 
 ### Example method (MLR)
-<img width="1795" height="1125" alt="Screenshot 2026-07-15 at 3 19 24 pm" src="https://github.com/user-attachments/assets/bb01e934-64da-4714-9148-1778cd60584d" />
+<img width="1795" height="1125" alt="Screenshot 2026-07-15 at 3 19 24 pm" src="https://github.com/user-attachments/assets/bb01e934-64da-4714-9148-1778cd60584d" />
 
 ### Example output
-<img width="1795" height="1126" alt="Screenshot 2026-07-15 at 3 19 55 pm" src="https://github.com/user-attachments/assets/f3b5ee86-3f71-4935-ae86-1e4f2aa5c341" />
+<img width="1795" height="1126" alt="Screenshot 2026-07-15 at 3 19 55 pm" src="https://github.com/user-attachments/assets/f3b5ee86-3f71-4935-ae86-1e4f2aa5c341" />
 
 ### Chart gallery
-<img width="1794" height="1124" alt="Screenshot 2026-07-15 at 3 20 20 pm" src="https://github.com/user-attachments/assets/d0a17ba2-bedf-48ed-bb73-982325fe9653" />
-
-
+<img width="1794" height="1124" alt="Screenshot 2026-07-15 at 3 20 20 pm" src="https://github.com/user-attachments/assets/d0a17ba2-bedf-48ed-bb73-982325fe9653" />
