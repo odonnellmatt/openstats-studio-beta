@@ -1,170 +1,170 @@
-# OpenStats Studio Beta 0.1.2
+# OpenStats Studio — Public Beta
 
-## Downloads
+A local-first desktop statistics application. Prepare data, run analyses, review
+structured results and produce report-ready output in one workspace — on your own
+machine, without sending datasets to a hosted service.
 
-### **[⬇ Download for macOS Apple Silicon](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.2-beta.1/OpenStats-Studio-Beta-0.1.2-macOS-Apple-Silicon.dmg)**
+Built for researchers, students, analysts and educators.
 
-**macOS 13 or later · Apple Silicon · 284 MB DMG**
+---
 
-### **[⬇ Download for Windows x64](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.2-beta.1/OpenStats-Studio-Beta-0.1.2-Windows-x64-setup.exe)**
+## Download Beta 0.1.3
 
-**Windows 10/11 · x64 · 180 MB installer**
+| Platform | Requirements | Download |
+| --- | --- | --- |
+| **macOS** | macOS 13+ · Apple Silicon | **[⬇ Download DMG](https://github.com/odonnellmatt/openstats-studio-beta/releases/latest/download/OpenStats-Studio-Beta-0.1.3-macOS-Apple-Silicon.dmg)** · 285 MiB |
+| **Windows** | Windows 10/11 · x64 | **[⬇ Download installer](https://github.com/odonnellmatt/openstats-studio-beta/releases/latest/download/OpenStats-Studio-Beta-0.1.3-Windows-x64-setup.exe)** · 180 MiB |
+| **Windows on ARM** | Windows 11 · ARM64 | **[⬇ Download installer](https://github.com/odonnellmatt/openstats-studio-beta/releases/latest/download/OpenStats-Studio-Beta-0.1.3-Windows-ARM64-setup.exe)** · 180 MiB |
 
-### **[⬇ Download for Windows on ARM](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.2-beta.1/OpenStats-Studio-Beta-0.1.2-Windows-ARM64-setup.exe)**
+Not sure which Windows build? **Settings → System → About → System type.**
 
-**Windows 11 · ARM64 · 179 MB installer**
+[Release notes and checksums](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.3-beta.1)
+ · [All releases](https://github.com/odonnellmatt/openstats-studio-beta/releases)
+ · [Version history](RELEASE_NOTES.md)
 
-This is prerelease beta software. Please read the beta notice below before use.
+> **Prerelease software.** Please read the [beta notice](#beta-notice) before use.
 
-OpenStats Studio is a local-first desktop statistics application for people who
-want to move from data to clear, structured results in one workspace.
+---
 
-It is designed for researchers, students, analysts and educators who need a
-practical environment for preparing data, running statistical analyses,
-reviewing results and producing useful outputs without sending their datasets
-to a hosted analysis service.
+## What's in Beta 0.1.3
 
-## What you can explore
+**This is a statistical correctness release.** All 145 analysis procedures were
+verified against independent references — published critical-value tables,
+textbook worked examples and independent libraries (SciPy, statsmodels,
+scikit-learn, linearmodels, arch) — rather than against the application's own
+code. Ten defects were found and fixed.
+
+**If you used any of these in an earlier beta, please re-run that analysis.**
+
+- **Grubbs' outlier test** reported a significant outlier on almost any dataset,
+  including clean ones. Now matches its published critical values exactly.
+- **ADF / KPSS unit-root tests** had no trend option, so a trend-stationary
+  series was called non-stationary and you were told to difference it. A
+  **Deterministic terms** setting has been added.
+- **ARIMA forecasts** of a differenced trending series had no drift term and came
+  out flat — worse than assuming no change. A **Trend / drift** setting has been
+  added and backtests now show naive baselines.
+- **Sphericity (Mauchly / Greenhouse–Geisser)** reported violations on data that
+  satisfied the assumption perfectly. Your F, p and effect sizes were unaffected.
+- **Mardia's test**, the **robust multivariate outlier screen**, **distance
+  correlation**, **goodness-of-fit** and several reporting details were corrected.
+- **Mistyped analysis options are now refused rather than silently ignored** —
+  previously an unrecognised setting ran the default, which could reverse a
+  conclusion with no warning.
+
+Full detail, including what changed and why, is in the
+[0.1.3 release notes](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.3-beta.1).
+
+### Earlier betas
+
+| Version | Highlights |
+| --- | --- |
+| **0.1.2** | Standard regression output (coefficients + fit statistics, equation, ANOVA); plain-language **Note** column on every diagnostic; content-sized tables; exports matching the screen; independent map layers; reworked Chart Studio ribbon |
+| **0.1.1** | First Windows builds (x64 and ARM); resizable, persistent Results columns; genuine `.docx` export; cleaner equations; help in every dialog; cancellable Graph Studio |
+| **0.1.0** | First public build (macOS); then Bayesian estimation and MCMC, ML workbenches, network analysis, Graph Studio and the map document model |
+
+Full history: **[RELEASE_NOTES.md](RELEASE_NOTES.md)**
+
+---
+
+## What you can do with it
 
 - Import, inspect and prepare common research datasets.
-- Run a broad collection of statistical and econometric analyses, including
-  Bayesian, machine-learning and network-analysis workbenches.
-- Review structured output, diagnostics and supporting guidance.
-- Organise results and reopen saved projects.
-- Create charts, graphs, maps and report-ready exports.
-- Work locally by default. Optional online map layers are clearly identified.
+- Run 145 statistical and econometric procedures across 26 families — including
+  regression and GLMs, panel and causal econometrics, time series and
+  forecasting, survival, clinical and diagnostic statistics, quality and DOE,
+  survey and missing-data methods, Bayesian analysis, and machine-learning and
+  network workbenches.
+- Review structured output with diagnostics and plain-language guidance.
+- Build charts, graphs and maps; export to Word, PDF, HTML, Markdown and Excel.
+- Save projects and reopen them with results intact.
+- Work locally by default. Optional online map layers are clearly identified
+  before any request is made.
 
-The beta is intentionally being released for hands-on evaluation. Try it with
-realistic but non-critical projects and let us know what works well, what feels
-unclear and where the workflow can improve.
+---
 
-## What's new in Beta 0.1.2
+## Install
 
-- **Standard regression output**: the results page now opens with the
-  coefficient table and its combined fit statistics (R², adjusted R², F,
-  information criteria, Durbin–Watson), followed by the estimated equation and
-  the ANOVA table — the familiar EViews/SPSS/R presentation.
-- **Self-explanatory diagnostics**: every diagnostic test now carries a
-  plain-language **Note** column stating what the result means at your chosen
-  significance level, with significance stars (`*`, `**`, `***`) shown
-  consistently on every p-value column. The Note column can be shown or hidden
-  from **Table style**, and table footnotes are numbered (Note¹, Note², …).
-- **Better tables**: tables size to their content instead of stretching across
-  the page, stay centred while being resized, and use a consistent 12px type
-  with more comfortable column spacing.
-- **Exports that match the screen**: Word, PDF, HTML and Markdown exports
-  follow the on-screen section order and now include the diagnostic charts
-  (coefficient intervals, residuals vs fitted, Q–Q plot) in the document.
-- **Mapping, graphing and charting**: independent map layers with per-layer
-  sources and styling, cancellable rendering for large graphs, and a reworked
-  Chart Studio ribbon with a Selection Pane supporting keyboard selection,
-  lock/reorder/inspect actions and undo/redo.
-- **Guidance everywhere**: concise, working help for every option across the
-  analysis catalogue.
+### macOS
 
-## What was new in Beta 0.1.1
+1. Download the `.dmg` above.
+2. Verify its SHA-256: `shasum -a 256 <file>` — compare against the
+   [published checksum](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.3-beta.1).
+3. Open the image and drag **OpenStats Studio** into **Applications**.
+4. Launch it. macOS may show an unidentified-developer warning; choose **Open
+   Anyway** in **System Settings → Privacy & Security** *only if the checksum
+   matched*.
+5. First launch takes a little longer while the bundled analytics engine starts.
 
-- First Windows builds: x64 and Windows on ARM installers joined the macOS DMG.
-- Resizable Results table columns that persist across navigation and
-  project save/reopen.
-- Reliable save, copy and export of results, including genuine `.docx` output.
-- Cleaner presentation of estimated equations, working help in every analysis
-  dialog, cancellable Graph Studio analyses, and faster loading.
+### Windows
 
-## Download
+1. Download the installer matching your machine (x64 for ordinary Intel/AMD PCs,
+   ARM64 for Snapdragon and similar).
+2. Verify its SHA-256: `certutil -hashfile <file> SHA256`.
+3. Run it. If SmartScreen appears, choose **More info → Run anyway** *only if the
+   checksum matched*.
+4. Launch **OpenStats Studio** from the Start menu.
 
-The direct download buttons at the top of this page download the current beta
-for each platform. Release notes and checksum files are also available from
-**Releases**:
+No separate Python, R, Node.js or internet connection is needed for ordinary
+analysis.
 
-**[View OpenStats Studio Beta 0.1.2 release details](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.2-beta.1)**
+---
 
-Current beta platforms:
+## Beta notice
 
-- macOS 13 or later on Apple Silicon (`arm64`). Intel Macs are not supported
-  by this build.
-- Windows 10/11 on x64.
-- Windows 11 on ARM (`arm64`). The bundled analytics engine currently runs
-  through Windows' built-in x64 compatibility layer; a fully native engine is
-  planned.
+This is prerelease software provided for evaluation. Features, project formats
+and outputs may change, and defects may still be present.
 
-## Important beta notice
-
-This is prerelease software provided for evaluation and testing. Features,
-project formats and outputs may change, and defects may still be present.
-
-- Do not rely on the beta as the sole copy of important work.
-- Keep backups of source data and saved projects.
+- Do not rely on the beta as the sole copy of important work; keep backups.
 - Independently review statistical specifications and important conclusions.
 - Do not use it as the only basis for safety-critical, clinical, legal or
   financial decisions.
-- There is currently no automatic update channel.
+- There is no automatic update channel yet.
 
-The macOS beta is locally signed for integrity but is not yet Apple-notarised,
-so macOS may display an unidentified-developer warning. The Windows installers
-are not yet code-signed, so Microsoft Defender SmartScreen may display a
-"Windows protected your PC" warning. In both cases, confirm that the downloaded
-file has the published SHA-256 before proceeding. Do not bypass the warning if
-the checksum differs.
+The macOS build is locally signed for integrity but **not yet Apple-notarised**.
+The Windows installers are **not yet code-signed**. Both may therefore trigger an
+operating-system warning. Confirm the published SHA-256 before proceeding, and do
+not bypass the warning if the checksum differs.
 
-## Install on macOS
-
-1. Download the `.dmg` from the latest beta release.
-2. Confirm its SHA-256 against the value published with the release.
-3. Open the disk image and drag **OpenStats Studio** into **Applications**.
-4. Launch the application. If macOS shows an unidentified-developer warning,
-   choose **Open Anyway** in **System Settings → Privacy & Security** only
-   after the checksum matches.
-5. The first launch may take a little longer while the bundled local analytics
-   engine starts.
-
-## Install on Windows
-
-1. Download the installer that matches your machine: `x64` for ordinary
-   Intel/AMD PCs, `ARM64` for Windows-on-ARM devices such as Snapdragon
-   laptops. (**Settings → System → About → System type** shows which you have.)
-2. Confirm its SHA-256 against the value published with the release
-   (`certutil -hashfile <file> SHA256` in a terminal).
-3. Run the installer. If SmartScreen appears, choose **More info → Run anyway**
-   only after the checksum matches.
-4. Launch **OpenStats Studio** from the Start menu. The first launch may take a
-   little longer while the bundled local analytics engine starts.
-
-No separate Python, R, Node.js or internet connection is required for ordinary
-analysis. Selecting an online map provider can contact that provider and reveal
-the geographic area being viewed; bundled and user-supplied map data can be used
-offline.
+---
 
 ## Feedback
 
-Please use this repository's **Issues** section for beta feedback. Include:
+Please use this repository's **[Issues](https://github.com/odonnellmatt/openstats-studio-beta/issues)**
+for beta feedback. Helpful reports include:
 
 - your operating system version and device model
-- the action you were attempting
-- what you expected and what happened
-- reproducible steps using non-confidential data
+- what you were trying to do
+- what you expected and what actually happened
+- steps to reproduce, using non-confidential data
 
-Do not attach confidential datasets, personal information or private project
-files to a public issue.
+Please do not attach confidential datasets, personal information or private
+project files to a public issue.
 
-## Source and intellectual property
+---
 
-This repository is a download and beta-feedback page only. It does not contain
-the OpenStats Studio application source code.
+## Source
 
-## Screenshots of Beta 0.1.1
+This repository is a download and feedback page only; it does not contain
+application source code.
+
+---
+
+## Screenshots
 
 ### Data view
-<img width="1794" height="1128" alt="Screenshot 2026-07-15 at 3 18 38 pm" src="https://github.com/user-attachments/assets/6654eb2a-5c60-4488-ac33-a532e2039185" />
+<img width="1794" height="1128" alt="Data view" src="https://github.com/user-attachments/assets/6654eb2a-5c60-4488-ac33-a532e2039185" />
 
-### Some methods
-<img width="1796" height="1125" alt="Screenshot 2026-07-15 at 3 18 54 pm" src="https://github.com/user-attachments/assets/be1b73c1-1f96-495c-9540-e3cba980ff96" />
+### Method catalogue
+<img width="1796" height="1125" alt="Method catalogue" src="https://github.com/user-attachments/assets/be1b73c1-1f96-495c-9540-e3cba980ff96" />
 
-### Example method (MLR)
-<img width="1795" height="1125" alt="Screenshot 2026-07-15 at 3 19 24 pm" src="https://github.com/user-attachments/assets/bb01e934-64da-4714-9148-1778cd60584d" />
+### Configuring an analysis (multiple linear regression)
+<img width="1795" height="1125" alt="Multiple linear regression setup" src="https://github.com/user-attachments/assets/bb01e934-64da-4714-9148-1778cd60584d" />
 
-### Example output
-<img width="1795" height="1126" alt="Screenshot 2026-07-15 at 3 19 55 pm" src="https://github.com/user-attachments/assets/f3b5ee86-3f71-4935-ae86-1e4f2aa5c341" />
+### Results output
+<img width="1795" height="1126" alt="Results output" src="https://github.com/user-attachments/assets/f3b5ee86-3f71-4935-ae86-1e4f2aa5c341" />
 
 ### Chart gallery
-<img width="1794" height="1124" alt="Screenshot 2026-07-15 at 3 20 20 pm" src="https://github.com/user-attachments/assets/d0a17ba2-bedf-48ed-bb73-982325fe9653" />
+<img width="1794" height="1124" alt="Chart gallery" src="https://github.com/user-attachments/assets/d0a17ba2-bedf-48ed-bb73-982325fe9653" />
+
+*Screenshots taken in Beta 0.1.1; the interface has since been refined.*
