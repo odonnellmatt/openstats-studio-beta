@@ -10,7 +10,34 @@ current, corrected build is downloadable. Their contents are recorded here.
 
 ## Beta 0.1.3 — 20 July 2026
 
-**Statistical correctness release.** All 145 analysis procedures were verified
+### New: Findings Builder
+
+A structured notebook that lives inside the project, assembled from the results
+actually run.
+
+- **Send results in** from Results, Chart Studio or Graph Studio — tables,
+  charts, graphs, coefficient plots, diagnostic plots and generated
+  interpretations — or pull in a whole session at once with **Import session
+  outputs**.
+- **Write around the evidence**: headings and sections, **Key finding**
+  callouts, info and warning boxes, equations, dividers and free text. Every
+  block carries its own caption, comment, limitations and follow-up note.
+- **Choose how each block tracks its source**: *live* blocks follow the analysis
+  and can be refreshed with **Update from source**; *snapshot* blocks are
+  deliberately frozen.
+- **Provenance is recorded**: each block stores the run, result, method,
+  dataset, variables and execution time it came from.
+- **Keep editing in place**: reorder by drag or keyboard, collapse sections, jump
+  back into Chart Studio or Graph Studio to adjust a figure, download charts as
+  PNG.
+- **Export** all blocks or a selection to **Word, PDF, HTML or Markdown**.
+
+Notebooks save and reopen with the project. The screen is fully
+keyboard-navigable with a built-in shortcuts panel.
+
+### Statistical correctness
+
+All 145 analysis procedures were verified
 against independent references — published critical-value tables, textbook
 worked examples and independent libraries (SciPy, statsmodels, scikit-learn,
 linearmodels, arch) — rather than against the application's own code. Ten

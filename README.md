@@ -33,7 +33,23 @@ Not sure which Windows build? **Settings → System → About → System type.**
 
 ## What's in Beta 0.1.3
 
-**This is a statistical correctness release.** All 145 analysis procedures were
+### New: Findings Builder
+
+A structured notebook inside your project, built from the results you actually
+ran. Send any table, chart, graph, coefficient plot or interpretation into it
+straight from Results, write headings, key findings and notes around them, and
+export the finished document to **Word, PDF, HTML or Markdown**.
+
+Blocks can stay **live** — refreshed from the analysis they came from when you
+re-run it — or be **frozen as a snapshot** so a figure you have already written
+about cannot move under you. Each block records the run, method, dataset,
+variables and execution time it came from.
+
+[More detail below](#findings-builder).
+
+### Statistical correctness
+
+All 145 analysis procedures were
 verified against independent references — published critical-value tables,
 textbook worked examples and independent libraries (SciPy, statsmodels,
 scikit-learn, linearmodels, arch) — rather than against the application's own
@@ -81,10 +97,53 @@ Full history: **[RELEASE_NOTES.md](RELEASE_NOTES.md)**
   survey and missing-data methods, Bayesian analysis, and machine-learning and
   network workbenches.
 - Review structured output with diagnostics and plain-language guidance.
+- **Assemble a Findings notebook** — send any table, chart, graph, coefficient
+  plot or interpretation straight from Results into a structured document, add
+  headings, key findings, callouts, equations and notes around them, reorder by
+  drag or keyboard, and export the whole thing to Word, PDF, HTML or Markdown.
+  See [Findings Builder](#findings-builder) below.
 - Build charts, graphs and maps; export to Word, PDF, HTML, Markdown and Excel.
 - Save projects and reopen them with results intact.
 - Work locally by default. Optional online map layers are clearly identified
   before any request is made.
+
+---
+
+## Findings Builder
+
+Analysis usually ends with a pile of output and a separate document to write. The
+**Findings** screen closes that gap: it is a structured notebook that lives inside
+your project, built from the results you actually ran.
+
+**Send results straight in.** From Results, Chart Studio or Graph Studio, push any
+table, chart, graph, coefficient plot, diagnostic plot or generated interpretation
+into the notebook — or pull in a whole session's output at once with **Import
+session outputs**.
+
+**Write around your evidence.** Add headings and sections, **Key finding**
+callouts, info and warning boxes, equations, dividers and free text. Every block
+can carry its own caption, comment, limitations and follow-up note, so the
+caveats travel with the result instead of living in your head.
+
+**Choose how each block tracks its source.** Blocks are *live*, *copy* or
+*snapshot*. A live block follows the analysis it came from and can be refreshed
+with **Update from source** when you re-run with different options; a snapshot is
+deliberately frozen so a figure you have already written about cannot move under
+you.
+
+**Provenance is recorded, not reconstructed.** Each block stores the run, result,
+method, dataset, variables and execution time it came from — so months later you
+can still tell which analysis produced a given table.
+
+**Keep editing without leaving.** Reorder by drag or keyboard, collapse sections,
+jump back into Chart Studio or Graph Studio to adjust a figure in place, or
+download any chart as PNG.
+
+**Export the finished document** to **Word, PDF, HTML or Markdown** — all blocks
+or just the ones you select. Charts embed as images, tables as real tables.
+
+Notebooks are saved inside the project and reopen with it. The screen is fully
+keyboard-navigable and has a built-in shortcuts panel.
 
 ---
 
