@@ -66,7 +66,7 @@ analyses.**
 ### Verification
 
 All 145 procedures are covered by independent numerical verification; the engine
-test suite grew from 1,186 to 1,191 tests. Kaplan–Meier and the log-rank test
+test suite now stands at 1,394 tests. Kaplan–Meier and the log-rank test
 reproduce the Freireich 6-MP trial exactly (χ² = 16.79, p = 4.17 × 10⁻⁵), and Cox
 regression matches a from-definition Efron partial-likelihood implementation to
 six decimal places.
