@@ -12,11 +12,16 @@ Built for researchers, students, analysts and educators.
 
 | Platform | Requirements | Download |
 | --- | --- | --- |
-| **macOS** | macOS 13+ · Apple Silicon | **[⬇ Download DMG](https://github.com/odonnellmatt/openstats-studio-beta/releases/latest/download/OpenStats-Studio-Beta-0.1.3-macOS-Apple-Silicon.dmg)** · 285 MiB |
-| **Windows** | Windows 10/11 · x64 | **[⬇ Download installer](https://github.com/odonnellmatt/openstats-studio-beta/releases/latest/download/OpenStats-Studio-Beta-0.1.3-Windows-x64-setup.exe)** · 180 MiB |
-| **Windows on ARM** | Windows 11 · ARM64 | **[⬇ Download installer](https://github.com/odonnellmatt/openstats-studio-beta/releases/latest/download/OpenStats-Studio-Beta-0.1.3-Windows-ARM64-setup.exe)** · 180 MiB |
+| **macOS** | macOS 13+ · Apple Silicon | **[⬇ Download DMG](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.3-beta.1/OpenStats-Studio-Beta-0.1.3-macOS-Apple-Silicon.dmg)** · 285 MiB |
+| **Windows** | Windows 10/11 · x64 | **[⬇ Download installer](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.3-beta.1/OpenStats-Studio-Beta-0.1.3-Windows-x64-setup.exe)** · 180 MiB |
+| **Windows on ARM** | Windows 11 · ARM64 | **[⬇ Download installer](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.3-beta.1/OpenStats-Studio-Beta-0.1.3-Windows-ARM64-setup.exe)** · 180 MiB |
 
 Not sure which Windows build? **Settings → System → About → System type.**
+
+<!-- Download links intentionally pin the release tag. GitHub's
+     /releases/latest/ endpoint ignores prereleases, so a /latest/download/
+     URL 404s while every release here is a prerelease. Update the tag in
+     these three links when publishing a new beta. -->
 
 [Release notes and checksums](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.3-beta.1)
  · [All releases](https://github.com/odonnellmatt/openstats-studio-beta/releases)
