@@ -217,18 +217,20 @@ application source code.
 ## Screenshots
 
 ### Data view
-<img width="1794" height="1128" alt="Data view" src="https://github.com/user-attachments/assets/6654eb2a-5c60-4488-ac33-a532e2039185" />
+<img width="1796" height="1060" alt="Screenshot 2026-07-21 at 9 29 32 pm" src="https://github.com/user-attachments/assets/af546fb6-c543-4e6e-8dcb-512bc588580e" />
 
 ### Method catalogue
 <img width="1796" height="1125" alt="Method catalogue" src="https://github.com/user-attachments/assets/be1b73c1-1f96-495c-9540-e3cba980ff96" />
 
 ### Configuring an analysis (multiple linear regression)
-<img width="1795" height="1125" alt="Multiple linear regression setup" src="https://github.com/user-attachments/assets/bb01e934-64da-4714-9148-1778cd60584d" />
+<img width="1793" height="1057" alt="Screenshot 2026-07-21 at 9 30 10 pm" src="https://github.com/user-attachments/assets/2c52406a-a09e-4619-8cb8-ff5f2b389702" />
 
 ### Results output
-<img width="1795" height="1126" alt="Results output" src="https://github.com/user-attachments/assets/f3b5ee86-3f71-4935-ae86-1e4f2aa5c341" />
+<img width="1795" height="1060" alt="Screenshot 2026-07-21 at 9 31 01 pm" src="https://github.com/user-attachments/assets/53f714a2-5ef5-4bed-80e6-05561ccc2435" />
+
+### Findings Builder
+<img width="1795" height="1059" alt="Screenshot 2026-07-21 at 9 35 13 pm" src="https://github.com/user-attachments/assets/a2bf2252-14c1-4a26-b812-d4d07c010212" />
 
 ### Chart gallery
-<img width="1794" height="1124" alt="Chart gallery" src="https://github.com/user-attachments/assets/d0a17ba2-bedf-48ed-bb73-982325fe9653" />
+<img width="1791" height="1054" alt="Screenshot 2026-07-21 at 9 31 37 pm" src="https://github.com/user-attachments/assets/1373a042-d728-44ce-9a16-fcafbd0fb1c1" />
 
-*Screenshots taken in Beta 0.1.1; the interface has since been refined.*
