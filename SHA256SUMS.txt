@@ -1,3 +1,3 @@
-d393a3236ca904db8e6cd99abb72ced532d80b6dbae145f0600bb91e08482efe  OpenStats-Studio-Beta-0.1.3-macOS-Apple-Silicon.dmg
-a18f880fe619e6e4f9207c5770cdcc4c3f10ed39ad4477e4c7c522156fcf406b  OpenStats-Studio-Beta-0.1.3-Windows-ARM64-setup.exe
-b6d48ca038c32d857db46c7dd6c73a0dc3e1f80627390e513002718d5f84e68c  OpenStats-Studio-Beta-0.1.3-Windows-x64-setup.exe
+8dc25dcd250ce773873c5e51d1f5137bf91d48455ece73a0dc816f0b687e43a8  OpenStats-Studio-Beta-0.1.4-macOS-Apple-Silicon.dmg
+5ea2d5bf65190789ddcdb2fea796c5027bd0d17bcac51d2a21abef0db1dfc916  OpenStats-Studio-Beta-0.1.4-Windows-x64-setup.exe
+d28edca1037cc3b61ed46fc61599bee03866257c0daf23dde4ea1d93774ca1fb  OpenStats-Studio-Beta-0.1.4-Windows-ARM64-setup.exe

@@ -1,10 +1,85 @@
 # OpenStats Studio Beta — version history
 
-Current release: **[Beta 0.1.3](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.3-beta.1)**
-· [Downloads](README.md#download-beta-013)
+Current release: **[Beta 0.1.4](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.4-beta.1)**
+· [Downloads](README.md#download-beta-014)
 
 Earlier beta releases have been removed from the Releases page so that only the
 current, corrected build is downloadable. Their contents are recorded here.
+
+---
+
+## Beta 0.1.4 — 29 July 2026
+
+### New: qualitative and mixed-methods research
+
+A complete qualitative surface alongside the statistical one: coding workspace,
+codebook manager, cases, memos, queries, matrices, code flow and code network
+views, quote wall, words studio, qualitative report and visualisation studio.
+The **mixed-methods bridge** adds Creswell design templates and a guided
+sample-study walkthrough.
+
+### New: methodology transparency
+
+- **Method cards and citations** for the procedures, with generated methods
+  paragraphs suitable for a write-up.
+- **Detailed Mode** guidance throughout setup, explaining why a column does or
+  does not suit a role.
+- **Latent variable models** — confirmatory factor analysis and structural
+  equation / path models.
+- **Agreement measures**, text and content analysis, QCA and Q-methodology.
+- **Study record**: an analysis plan is locked with a SHA-256 hash, and every
+  later run is classified as *pre-specified* or *exploratory* against it.
+
+### Reworked method setup
+
+The Model panel is now two independently scrolling sections separated by a
+draggable splitter that is also operable from the keyboard (`role="separator"`,
+Arrow keys, Home/End), with its position remembered between sessions.
+
+Previously every variable assigned made the role cards taller and pushed the
+variable browser further down the page, so building a model with fifteen
+predictors meant scrolling back to the list after each click. The browser now
+stays exactly where it is. For methods whose roles can only ever hold one column
+each, the assigned area sizes itself to its content rather than reserving a fixed
+share of the panel.
+
+### Correctness and reachability
+
+**Anyone who used the affected procedures in an earlier beta should re-run those
+analyses.**
+
+- **One column filling two roles in a single analysis is now refused.** Thirty-two
+  procedures either crashed inside pandas (`arg must be a list, tuple, 1-d array,
+  or Series`) or silently de-duplicated and fitted a model that had not been
+  requested. The crashing set included independent-samples t-test, one-way ANOVA,
+  Mann–Whitney, Kruskal–Wallis and Tukey HSD. The rule is now enforced centrally,
+  so new procedures inherit it.
+- **Survey weights** are guarded against doubling as an analysis, grouping or axis
+  variable in weighted descriptives and weighted crosstabs.
+- **Menu reachability**: an entire Text & Content Analysis submenu — eleven
+  procedures — plus the agreement, CFA, SEM and GLMM entries were unreachable from
+  the macOS menu bar. The native menu is regenerated, a test now fails if any
+  declared group is left unattached, and the generator checks that allowed this to
+  ship are wired into CI.
+- **Cold validation review** of seven procedures, carried out against published
+  references rather than the implementing code, with every finding closed.
+
+### Platforms
+
+- macOS 13 or later, Apple Silicon (`arm64`).
+- Windows 10/11, x64.
+- Windows 11, ARM64.
+
+### Verify the downloads
+
+| File | Size (bytes) | SHA-256 |
+| --- | --- | --- |
+| `OpenStats-Studio-Beta-0.1.4-macOS-Apple-Silicon.dmg` | 251,871,379 | `8dc25dcd250ce773873c5e51d1f5137bf91d48455ece73a0dc816f0b687e43a8` |
+| `OpenStats-Studio-Beta-0.1.4-Windows-x64-setup.exe` | 205,691,357 | `5ea2d5bf65190789ddcdb2fea796c5027bd0d17bcac51d2a21abef0db1dfc916` |
+| `OpenStats-Studio-Beta-0.1.4-Windows-ARM64-setup.exe` | 205,453,668 | `d28edca1037cc3b61ed46fc61599bee03866257c0daf23dde4ea1d93774ca1fb` |
+
+Neither platform's build is code-signed. See
+**[Install](README.md#install)** for the extra step each operating system needs.
 
 ---
 

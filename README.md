@@ -8,13 +8,13 @@ Built for researchers, students, analysts and educators.
 
 ---
 
-## Download Beta 0.1.3
+## Download Beta 0.1.4
 
 | Platform | Requirements | Download |
 | --- | --- | --- |
-| **macOS** | macOS 13+ · Apple Silicon | **[⬇ Download DMG](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.3-beta.1/OpenStats-Studio-Beta-0.1.3-macOS-Apple-Silicon.dmg)** · 284.9 MiB |
-| **Windows** | Windows 10/11 · x64 | **[⬇ Download installer](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.3-beta.1/OpenStats-Studio-Beta-0.1.3-Windows-x64-setup.exe)** · 179.8 MiB |
-| **Windows on ARM** | Windows 11 · ARM64 | **[⬇ Download installer](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.3-beta.1/OpenStats-Studio-Beta-0.1.3-Windows-ARM64-setup.exe)** · 179.6 MiB |
+| **macOS** | macOS 13+ · Apple Silicon | **[⬇ Download DMG](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.4-beta.1/OpenStats-Studio-Beta-0.1.4-macOS-Apple-Silicon.dmg)** · 240.2 MiB |
+| **Windows** | Windows 10/11 · x64 | **[⬇ Download installer](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.4-beta.1/OpenStats-Studio-Beta-0.1.4-Windows-x64-setup.exe)** · 196.2 MiB |
+| **Windows on ARM** | Windows 11 · ARM64 | **[⬇ Download installer](https://github.com/odonnellmatt/openstats-studio-beta/releases/download/v0.1.4-beta.1/OpenStats-Studio-Beta-0.1.4-Windows-ARM64-setup.exe)** · 195.9 MiB |
 
 Not sure which Windows build? **Settings → System → About → System type.**
 
@@ -23,7 +23,7 @@ Not sure which Windows build? **Settings → System → About → System type.**
      URL 404s while every release here is a prerelease. Update the tag in
      these three links when publishing a new beta. -->
 
-[Release notes and checksums](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.3-beta.1)
+[Release notes and checksums](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.4-beta.1)
  · [All releases](https://github.com/odonnellmatt/openstats-studio-beta/releases)
  · [Version history](RELEASE_NOTES.md)
 
@@ -31,9 +31,51 @@ Not sure which Windows build? **Settings → System → About → System type.**
 
 ---
 
-## What's in Beta 0.1.3
+## What's in Beta 0.1.4
 
-### New: Findings Builder
+### New: qualitative and mixed-methods research
+
+A full qualitative surface alongside the statistics: a **coding workspace**,
+codebook manager, cases, memos, queries, matrices, code flow and code network
+views, quote wall, words studio and a qualitative report builder — plus a
+**mixed-methods bridge** with Creswell design templates and a guided sample-study
+walkthrough.
+
+### New: methodology transparency
+
+Method cards and citations, generated methods paragraphs, Detailed Mode guidance
+throughout, latent variable models (**CFA and SEM**), agreement measures, text and
+content analysis, QCA and Q-methodology. The **study record** locks an analysis
+plan with a SHA-256 hash and classifies every subsequent run as *pre-specified* or
+*exploratory*, so the distinction is recorded rather than remembered.
+
+### Reworked method setup
+
+The Model panel is now two independently scrolling sections divided by a
+draggable, keyboard-operable splitter. Adding a variable no longer pushes the
+variable browser down the page — building a model with fifteen predictors no
+longer means scrolling back to the list after every click. Where a method's roles
+can never grow, the panel sizes itself to its content instead of reserving space.
+
+### Correctness and reachability fixes
+
+**If you used any of these in an earlier beta, please re-run that analysis.**
+
+- **One column can no longer fill two roles in a single analysis.** 32 procedures
+  either crashed inside pandas or silently de-duplicated and fitted a model that
+  was never requested — including independent-samples t-test, one-way ANOVA,
+  Mann–Whitney, Kruskal–Wallis and Tukey HSD. Now refused centrally with a clear
+  message.
+- **Survey weights** can no longer double as an analysis, grouping or axis
+  variable in weighted descriptives and crosstabs.
+- **An entire Text & Content Analysis submenu (11 procedures)**, plus the
+  agreement, CFA, SEM and GLMM entries, were unreachable from the macOS menu bar.
+  The menu is regenerated and a test now prevents a declared group being left
+  unattached.
+- A **cold validation review of seven procedures** was carried out independently
+  of the code that implements them, and every finding closed.
+
+### Earlier: Findings Builder (0.1.3)
 
 A structured notebook inside your project, built from the results you actually
 ran. Send any table, chart, graph, coefficient plot or interpretation into it
@@ -47,39 +89,13 @@ variables and execution time it came from.
 
 [More detail below](#findings-builder).
 
-### Statistical correctness
-
-All 145 analysis procedures were
-verified against independent references — published critical-value tables,
-textbook worked examples and independent libraries (SciPy, statsmodels,
-scikit-learn, linearmodels, arch) — rather than against the application's own
-code. Ten defects were found and fixed.
-
-**If you used any of these in an earlier beta, please re-run that analysis.**
-
-- **Grubbs' outlier test** reported a significant outlier on almost any dataset,
-  including clean ones. Now matches its published critical values exactly.
-- **ADF / KPSS unit-root tests** had no trend option, so a trend-stationary
-  series was called non-stationary and you were told to difference it. A
-  **Deterministic terms** setting has been added.
-- **ARIMA forecasts** of a differenced trending series had no drift term and came
-  out flat — worse than assuming no change. A **Trend / drift** setting has been
-  added and backtests now show naive baselines.
-- **Sphericity (Mauchly / Greenhouse–Geisser)** reported violations on data that
-  satisfied the assumption perfectly. Your F, p and effect sizes were unaffected.
-- **Mardia's test**, the **robust multivariate outlier screen**, **distance
-  correlation**, **goodness-of-fit** and several reporting details were corrected.
-- **Mistyped analysis options are now refused rather than silently ignored** —
-  previously an unrecognised setting ran the default, which could reverse a
-  conclusion with no warning.
-
-Full detail, including what changed and why, is in the
-[0.1.3 release notes](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.3-beta.1).
+Full detail is in **[RELEASE_NOTES.md](RELEASE_NOTES.md)**.
 
 ### Earlier betas
 
 | Version | Highlights |
 | --- | --- |
+| **0.1.3** | Findings Builder; all 145 procedures verified against independent references (published critical-value tables, textbook examples, SciPy/statsmodels/scikit-learn/linearmodels/arch), correcting Grubbs, ADF/KPSS, ARIMA drift, sphericity, Mardia and more; mistyped options refused rather than silently ignored |
 | **0.1.2** | Standard regression output (coefficients + fit statistics, equation, ANOVA); plain-language **Note** column on every diagnostic; content-sized tables; exports matching the screen; independent map layers; reworked Chart Studio ribbon |
 | **0.1.1** | First Windows builds (x64 and ARM); resizable, persistent Results columns; genuine `.docx` export; cleaner equations; help in every dialog; cancellable Graph Studio |
 | **0.1.0** | First public build (macOS); then Bayesian estimation and MCMC, ML workbenches, network analysis, Graph Studio and the map document model |
@@ -149,25 +165,74 @@ keyboard-navigable and has a built-in shortcuts panel.
 
 ## Install
 
-### macOS
+**These builds are not code-signed.** The macOS app is ad-hoc signed and not
+Apple-notarised; the Windows installers carry no certificate. Neither system will
+open them by the normal route — each needs one deliberate extra step, set out
+below. Check the SHA-256 first, and if it does not match, stop and do not
+continue.
 
-1. Download the `.dmg` above.
-2. Verify its SHA-256: `shasum -a 256 <file>` — compare against the
-   [published checksum](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.3-beta.1).
-3. Open the image and drag **OpenStats Studio** into **Applications**.
-4. Launch it. macOS may show an unidentified-developer warning; choose **Open
-   Anyway** in **System Settings → Privacy & Security** *only if the checksum
-   matched*.
+### macOS · Apple Silicon
+
+1. **Verify the download.**
+
+   ```bash
+   shasum -a 256 ~/Downloads/OpenStats-Studio-Beta-0.1.4-macOS-Apple-Silicon.dmg
+   ```
+
+   Compare it with the [published checksum](https://github.com/odonnellmatt/openstats-studio-beta/releases/tag/v0.1.4-beta.1).
+   Continue only if it matches.
+
+2. **Install.** Open the `.dmg`, drag **OpenStats Studio** into **Applications**,
+   then eject the disk image.
+
+3. **Clear the quarantine flag.** Because the app is ad-hoc signed rather than
+   issued under a developer certificate, macOS refuses it outright — typically
+   *"OpenStats Studio is damaged and can't be opened"* — and on current macOS
+   there is no **Open Anyway** button to fall back on. In **Terminal**:
+
+   ```bash
+   xattr -dr com.apple.quarantine "/Applications/OpenStats Studio.app"
+   ```
+
+   This removes only the marker macOS attaches to files downloaded from the
+   internet. It does not modify the application.
+
+4. **Open it.** If you saw *"cannot be opened because the developer cannot be
+   verified"* instead, open **System Settings → Privacy & Security**, scroll to
+   **Security**, and choose **Open Anyway**.
+
 5. First launch takes a little longer while the bundled analytics engine starts.
 
-### Windows
+### Windows · x64 and ARM64
 
-1. Download the installer matching your machine (x64 for ordinary Intel/AMD PCs,
-   ARM64 for Snapdragon and similar).
-2. Verify its SHA-256: `certutil -hashfile <file> SHA256`.
-3. Run it. If SmartScreen appears, choose **More info → Run anyway** *only if the
-   checksum matched*.
-4. Launch **OpenStats Studio** from the Start menu.
+Which installer? **Settings → System → About → System type** — *x64* for ordinary
+Intel/AMD PCs, *ARM64* for Snapdragon and other Windows-on-ARM devices.
+
+1. **Verify the download.** In Command Prompt:
+
+   ```bat
+   certutil -hashfile "%USERPROFILE%\Downloads\OpenStats-Studio-Beta-0.1.4-Windows-x64-setup.exe" SHA256
+   ```
+
+   Compare it with the published checksum. Continue only if it matches.
+
+2. **Unblock the file.** Right-click the `.exe` → **Properties** → tick
+   **Unblock** at the bottom of the **General** tab → **OK**. In PowerShell the
+   equivalent is:
+
+   ```powershell
+   Unblock-File -Path "$env:USERPROFILE\Downloads\OpenStats-Studio-Beta-0.1.4-Windows-x64-setup.exe"
+   ```
+
+3. **Run the installer.** SmartScreen will show **"Windows protected your PC"**
+   because the installer is unsigned. Choose **More info → Run anyway**.
+
+4. **If Defender quarantines it,** restore it from **Windows Security → Virus &
+   threat protection → Protection history** — again, only if the checksum
+   matched.
+
+5. Launch **OpenStats Studio** from the Start menu. First launch takes a little
+   longer while the bundled analytics engine starts.
 
 No separate Python, R, Node.js or internet connection is needed for ordinary
 analysis.
@@ -185,10 +250,11 @@ and outputs may change, and defects may still be present.
   financial decisions.
 - There is no automatic update channel yet.
 
-The macOS build is locally signed for integrity but **not yet Apple-notarised**.
-The Windows installers are **not yet code-signed**. Both may therefore trigger an
-operating-system warning. Confirm the published SHA-256 before proceeding, and do
-not bypass the warning if the checksum differs.
+The macOS build is ad-hoc signed and **not Apple-notarised**; the Windows
+installers are **not code-signed**. Both will therefore be blocked by the
+operating system on first run, and clearing that block takes a deliberate manual
+step — see [Install](#install). Confirm the published SHA-256 before you take it,
+and do not bypass the warning if the checksum differs.
 
 ---
 
