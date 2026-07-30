@@ -74,9 +74,9 @@ analyses.**
 
 | File | Size (bytes) | SHA-256 |
 | --- | --- | --- |
-| `OpenStats-Studio-Beta-0.1.4-macOS-Apple-Silicon.dmg` | 251,871,379 | `8dc25dcd250ce773873c5e51d1f5137bf91d48455ece73a0dc816f0b687e43a8` |
-| `OpenStats-Studio-Beta-0.1.4-Windows-x64-setup.exe` | 205,691,357 | `5ea2d5bf65190789ddcdb2fea796c5027bd0d17bcac51d2a21abef0db1dfc916` |
-| `OpenStats-Studio-Beta-0.1.4-Windows-ARM64-setup.exe` | 205,453,668 | `d28edca1037cc3b61ed46fc61599bee03866257c0daf23dde4ea1d93774ca1fb` |
+| `OpenStats-Studio-Beta-0.1.4-macOS-Apple-Silicon.dmg` | 307,864,496 | `79218c5e6c94821c3cbaa26742abe83ce4fb27bce469967961f16745c19c362c` |
+| `OpenStats-Studio-Beta-0.1.4-Windows-x64-setup.exe` | 206,466,614 | `5d33fb026edcbb075b710cc20ce443524625f1d8ea8bffcf0ccdc58b75e7e820` |
+| `OpenStats-Studio-Beta-0.1.4-Windows-ARM64-setup.exe` | 206,303,607 | `13dfe0c5bbc5c87a0bf001f8bb95295b589b3ef4b2f3566e363990e81a281598` |
 
 Neither platform's build is code-signed. See
 **[Install](README.md#install)** for the extra step each operating system needs.
